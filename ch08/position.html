@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: red;
+  }
+
+  #static {
+
+  }
+
+  /*  */
+  #relative:hover {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    background-color: blueviolet;
+  }
+
+  /* (속성을 가지고 있지 않은) 부모를 기준으로 움직임 - 현재는 body 기준*/
+  #absolute {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: olive;
+  }
+
+  /* 지정한 위치에 고정 */
+  #fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: aquamarine;
+  }
+  </style>
+</head>
+<body>
+  <div id="static"></div>
+  <div id="relative"></div>
+  <div id="absolute"></div>
+  <div id="fixed"></div>
+</body>
+</html>
