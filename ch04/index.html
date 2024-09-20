@@ -4,25 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- css 적용 방법 1 -->
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <link rel="stylesheet" href="css/mystyle.css">
+  <!-- css 적용 방법 2 -->
+  <!-- <style>
+    /* CSS */
+    @import url("css/mystyle.css");
+  </style> -->
 </head>
 <body>
   <!-- <a href="https://www.naver.com">네이버</a>
   <a href="https://www.naver.com" target="_blank">NAVER</a>
   <a href="https://www.google.com">구글</a> -->
-  <ul>
-    <li><a href="#info">레드향</a></li>
-    <li><a href="#recipe">샐러드 레시피</a></li>
-    <li><a href="#product">상품 구성</a></li>
-  </ul>
+  <nav>
+    <ul>
+      <li class="list">
+        <!-- <div style="color: blueviolet;">
+          <i class="fa-solid fa-camera fa-10px"></i> 
+        </div> -->
+        <a href="#info">레드향</a>
+      </li>
+      <li class="list"><a href="#recipe">샐러드 레시피</a></li>
+      <li class="list"><a href="#product">상품 구성</a></li>
+    </ul>
+  </nav>
+  
 
   <h1 id = "info">레드향</h1>
   <hr>
-  <img src="images/tangerines.jpg" alt="레드향" width="50%">
+
+  <div id="img">
+    <img class="image" src="images/tangerines.jpg" alt="레드향" width="50%">
+  </div>
   <p>껍질에 붉은 빛이 돌아 레드향이라 불린다<br>
     <b>레드향은</b> <em>한라봉과 귤을 교배</em>한 것으로<br>
     일반 귤보다 <strong>2~3배</strong> 크고,<br>
     과육이 붉고 통통하다.
   </p>
+
   <h2 id = "recipe">레드향 샐러드 레시피</h2>
   <!-- <img src="images/salad.jpg" alt="샐러드" width="50%"> -->
   <!-- <ul>    
@@ -31,7 +51,9 @@
     <li>드레싱 재료를 믹서에 갈아줍니다.</li>
     <li>볼에 샐러드 채소와 썰어 둔 재료를 넣고 드레싱을 뿌리면 끝 !</li>
   </ul> -->
-  <video src="medias/salad.mp4" controls width="50%" poster="images/salad.jpg" autoplay muted loop></video><br>
+
+  <!-- autoplay -->
+  <video src="medias/salad.mp4" controls width="50%" poster="images/salad.jpg" muted loop></video><br>
   <audio src="medias/spring.mp3" controls loop></audio>
   <ol>    
     <li>샐러드 채소를 씻고 물기를 제거한 후 준비합니다.</li>
@@ -39,7 +61,8 @@
     <li>드레싱 재료를 믹서에 갈아줍니다.</li>
     <li>볼에 샐러드 채소와 썰어 둔 레드향, 아보카도, 토마토를 넣고 드레싱을 뿌리면 끝 !</li>
   </ol>
-  <h2 id = "product">상품 구성</h2>
+
+  <h2 id = "product" style="color: red; font-size: 30px; font-style: italic;">상품 구성</h2>
   <table>
     <caption>선물용과 가정용 상품 구성</caption>
     <tr>
@@ -48,25 +71,25 @@
       <th>갯수</th>
       <th>가격</th>
     </tr>
-    <tr>
+    <tr class="row">
       <td>선물용</td>
       <td>3kg</td>
       <td>11~16과</td>
       <td>35,000원</td>
     </tr>
-    <tr>
+    <tr class="row">
       <td>선물용</td>
       <td>5kg</td>
       <td>18~26과</td>
       <td>52,000원</td>
     </tr>
-    <tr>
+    <tr class="row">
       <td>가정용</td>
       <td>3kg</td>
       <td>11~16과</td>
       <td>30,000원</td>
     </tr>
-    <tr>
+    <tr class="row">
       <td>가정용</td>
       <td>5kg</td>
       <td>18~26과</td>

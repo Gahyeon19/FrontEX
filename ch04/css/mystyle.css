@@ -1,0 +1,76 @@
+body {
+  color: blue;
+  background-color: bisque;
+  /* padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; */
+}
+h1, h2 {
+  color: green;
+}
+* {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* id로 설정할 수도 있음 */
+#info {
+  color: black;
+}
+/* class 이름으로 설정할 수도 있음 */
+.list {
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  width: 125px;
+  height: 20px;
+  /* margin: 0; */
+}
+a {
+  text-decoration: none;
+}
+
+/* 마우스를 올렸을 때(hover) 배경 색 변경 (방법 3가지)*/
+/* .list:hover {
+  background-color: aquamarine;
+} */
+/* nav li:hover {
+  background-color: olive;
+} */
+ul>li:hover {
+  background-color: violet;
+}
+/* nav>ul {
+  list-style: circle;
+} */
+.row:hover {
+  background-color: aqua;
+}
+
+table {
+  caption-side: bottom;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+tr,th {
+  border: 2px dotted black;
+  padding: 5px;
+  text-align: center;
+}
+
+#img {
+  width: 500px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image {
+  /* border: solid brown;
+  border-width: thick; */
+  /* border-radius: 30px; */
+  width: 50%;
+  height: 50%;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+}
