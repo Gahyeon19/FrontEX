@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let array = ["봄", "여름", "가을", "겨울", 1, 2, 3, 4];
+    console.log(array[0]);    //봄
+
+    let number = prompt("숫자를 입력하세요");
+    console.log(typeof(number));    //숫자를 입력해도 string으로 인식한다. (prompt 자체가 string 아니면 null로 인식하기 때문에)
+    
+    if(number === '10'){   //(느슨한 자료형 체크) number == 10을 해도 값은 같기 때문에 숫자라고 인식
+      console.log("문자 10을 입력했습니다.");
+    }
+    else {    
+      console.log("숫자 10을 입력했습니다.");
+    }
+    
+    number = parseInt(number);
+    console.log(typeof(number));
+    if(number === 10){   //자료형까지 확인: ===
+      console.log("숫자 10을 입력했습니다 !");
+    }
+    else {    
+      console.log("문자 10을 입력했습니다 !");
+    }
+  </script>
+</body>
+</html>
