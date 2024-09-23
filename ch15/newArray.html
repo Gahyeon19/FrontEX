@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let array = new Array();
+    // array[0] = 1;
+    // array[1] = 2;
+    // array[2] = 3;
+    // array[3] = 4;
+    // array[10] = 11;
+
+    // console.log(array);
+    // console.log(array[9]);  //undefined
+
+    let num = parseInt(prompt("숫자를 입력하세요."));
+    if (num >= 1) {
+      let array = new Array(num);
+      for (let i = 0; i < array.length; i++) {
+        array[i] = i + 1;
+        document.write(`${array[i]} <br>`);
+      }
+      array.forEach(item => console.log(item));             //forEach문 이용하여 array 출력
+      // console.log(array.filter(item => item % 2 == 1));  //홀수만 출력
+      array.filter(item => item % 2 == 1).forEach(item => console.log(item));
+    } else {
+      document.write("배열이 생성되지 않았습니다.");
+    }
+
+  </script>
+</body>
+
+</html>
