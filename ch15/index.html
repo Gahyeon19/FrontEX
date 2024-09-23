@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // window.alert이 먼저 실행되고 document가 실행됨. (window는 생략 가능)
+    // document.write("<h1>안녕하세요</h1>");
+    // alert('안녕하세요');
+
+    let name = prompt('이름을 입력하세요');
+    let nickname = 'hong';
+    if(name){   //truthy
+      // document.write(name + "님()" + nickname + ") 환영합니다.");
+      document.write(`${name}님 (${nickname}) 환영합니다.`);
+      // console.log(name + "님 안녕하세요");
+      console.log(`${name}님 (${nickname}) 안녕하세요.`);
+    } else {    //falsy = null, undefined
+      document.write("환영합니다 !");
+      console.log("안녕하세요 !");
+    }
+  </script>
+</body>
+</html>
