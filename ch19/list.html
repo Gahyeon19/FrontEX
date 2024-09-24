@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<!-- body onload="newFnc()" : body 안의 document가 전부 실행되고 난 다음에 newFnc() 실행 -->
+<body onload="newFnc()">
+  <script>
+    function newFnc() {
+      let ul = document.querySelector("#parent");   //document도 생성되기 전 + id가 parent인 ul이 선언되기 전 이므로 오류 발생
+      ul.setAttribute("class", "new");      
+    }
+  </script>
+
+  <img src="" alt="" onload="checkImgSize()">
+  <p></p>
+  <input id="todo" type="text">
+  <button onclick="addNewList()">리스트 추가하기</button>
+  <button onclick="removeLastList()">마지막 리스트 삭제하기</button>
+  <ul id="parent">
+  </ul>
+
+  <script>
+    function addNewList() {
+      let todo = document.querySelector('#todo');   //입력받은 값 list에 추가하기
+
+      let newList = document.createElement("li");
+      newList.setAttribute("class", "list");
+      newList.innerText = todo.value;
+
+      let btn = document.createElement("button");
+      btn.innerText = "X";
+      newList.appendChild(btn);
+      btn.addEventListener("click", (e) => {
+        let list = e.target.parentElement;
+        list.parentElement.removeChild(list);
+      });
+
+      let parent = document.querySelector("#parent");
+      parent.appendChild(newList);
+      // console.log(todo.value);
+    }
+
+    function removeLastList() {
+      let parent = document.querySelector("#parent");
+      // let result = parent ?? "삭제할 노드가 없습니다.";    //parent가 null이면 null이 아닌 "삭제~"가 출력된다.
+      // console.log(result);
+      if (parent && parent.lastChild) {
+        parent.removeChild(parent.lastChild);
+      }
+    }
+
+    // function removeList(btn) {
+    //   let list = btn.parentNode();
+    //   let ul = list.parentNode();
+    //   ul.removeChild(list);
+    // }
+
+  </script>
+</body>
+</html>
