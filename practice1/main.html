@@ -9,9 +9,6 @@
 </head>
 
 <body>
-  <header>
-    <h1>웹의 탄생</h1>
-  </header>
 
   <nav>
     <ul>
@@ -19,10 +16,12 @@
       <li><a href="css.html">CSS</a></li>
       <li><a href="javascript.html">JAVASCRIPT</a></li>
     </ul>
-    <h2>Tim Berners-Lee</h2>
   </nav>
-  <hr>
 
+  <header>
+    <h1 id="heading" onclick="showImg('Tim_Berners-Lee.jpg')" ondblclick="hideImg()">팀 버너스 리</h1>
+  </header>
+  <hr>
 
   <img class="images" src="images/Tim_Berners-Lee.jpg" alt="Tim_Berners-Lee">
 
@@ -36,7 +35,7 @@
 
 
 
-
+  <script src="js/function.js"></script>
 </body>
 
 </html>
