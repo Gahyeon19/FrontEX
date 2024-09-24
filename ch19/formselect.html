@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- select 객체는 <select> 태그로 만들어진 콤보박스 -->
+  <select name="" id="images" onchange="changeImg()">
+    <option value="images/coffee-blue.jpg" selected>blue</option>
+    <option value="images/coffee-gray.jpg">gray</option>
+    <option value="images/coffee-pink.jpg">pink</option>
+  </select>
+
+  <img id="img" src="images/coffee-blue.jpg" alt="coffeeImg">
+
+  <script>
+    function changeImg(){
+      let select = document.getElementById('images');
+      let img = document.getElementById('img');
+      img.src = select.options[select.selectedIndex].value;
+      console.log(select.options[select.selectedIndex].value);
+    }
+  </script>
+</body>
+</html>
