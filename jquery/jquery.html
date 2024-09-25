@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <div class="title">1</div>
+  <div class="title">2</div>
+  <button onclick="addClass()">클래스 추가</button>
+  <button onclick="hide()">div 숨기기</button>
+
+  <button onclick="changeColor()">배경색 바꾸기</button>
+  <button id="btn">hide</button>
+
+
+  <script>
+    function addClass(){
+      //jquery 사용 안할때
+      let titleElements = document.getElementsByClassName("title");
+      for (let titleElement of titleElements) {
+        titleElement.className = titleElement.className + " selected";
+      }
+      console.log(titleElements);
+
+      //jquery 사용
+      $(".title").addClass("selected");
+    }
+
+    function hide(){
+      // $("div").hide();
+      $(".title").hide();   //title class 숨기기
+    }
+
+    function changeColor(){
+      $(".title").css('backgroundColor', 'gray');
+      $("div").html("<h1>hi</h1>");
+    }
+
+    $(() => {
+        $("#btn").click(() => $("button").hide());
+    });
+
+    // $(".title").css('backgroundColor', 'pink').html("hello");
+    
+  </script>
+</body>
+</html>
