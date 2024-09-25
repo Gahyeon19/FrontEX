@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>onClick, 계산기 만들기</h1>
+  <hr>
+
+  <p>계산하고자 하는 수식을 입력하고 계산 버튼을 누르세요.</p>
+  <form action="">
+    <label for="exp">식</label><input type="text" name="exp" id="exp" value="">
+    <label for="result">결과</label><input type="text" name="result" id="result" value="" readonly>
+    <input type="submit" value="계산" onclick="event.preventDefault(); caculator(event)">
+    <!-- <button type="submit">계산</button> -->
+  </form>
+
+  <script>
+    function caculator(e){
+      let exp = document.querySelector("#exp");
+      let result = document.querySelector("#result");
+      let value = eval(exp.value);
+      console.log(value);
+      if(value){
+        result.value = value;
+      }
+    }
+  </script>
+</body>
+</html>
